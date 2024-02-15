@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter - Choose Countries</title>
+    <fieldset style="border-radius:5px;background-color:white">
+</head>
+<body>
+  <img src="https://i.ibb.co/rfDYVQN/download-1.png" alt="download-1" width="50" border="0">
+   <marquee><var><h1>USD to Currency Converter</h1></var></marquee>
+    <p>Enter the amount in US Dollars (USD) to convert to the selected currencies:</p>
+    <label for="usdAmount">Amount in USD:</label>
+    <input type="number" id="usdAmount" class="input-type" placeholder="Enter USD amount" step="0.01">
+    <br><br>
+    <label for="selectCountry1">Select Country 1:</label>
+    <select id="selectCountry1">
+        <option value="ZAR">South African Rand (ZAR)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="GBP">British Pound (GBP)</option>
+        <!-- Add more currencies as needed -->
+    </select>
+    <br><br>
+    <label for="selectCountry2">Select Country 2:</label>
+    <select id="selectCountry2">
+        <option value="ZAR">South African Rand (ZAR)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="GBP">British Pound (GBP)</option>
+        <!-- Add more currencies as needed -->
+    </select>
+    <br><br>
+    <button type="button" onclick="convertCurrencies()">Convert</button>
+    <br><br>
+    <p id="result"></p>
+
+    <script>
+        async function convertCurrencies() {
+            const usdAmount = document.getElementById('usdAmount').value;
+            const baseCurrency = 'USD';
+            const currency1 = document.getElementById('selectCountry1').value;
+            const currency2 = document.getElementById('selectCountry2').value;
+
+            const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${baseCurrency}`);
+            const data = await response.json();
+            
+            const rate1 = data.rates[currency1];
+            const amount1 = (usdAmount * rate1).toFixed(2);
+            
+            const rate2 = data.rates[currency2];
+            const amount2 = (usdAmount * rate2).toFixed(2);
+
+            const result = `${usdAmount} USD is approximately ${amount1} ${currency1} and ${amount2} ${currency2}`;
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>
+</fieldset>
+<style>
+  .input-type{
+    backgroud-color:white;
+    border-radius:5px;
+    margin:1;
+    display:flex;
+    
+  }
+  p{
+    color:green;
+  }
+  h1{
+    color:blue;
+  }
+  fieldset{
+    box-shadow: 3px 3px 5px 6px #ccc;
+  }
+  button{
+    color:white;
+    background-color:blue;
+    border-radius: 5px;
+  }
+  img{
+    width:1;
+    height:4;
+  }
+</style>
